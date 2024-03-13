@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 export let Register = () => {
     let [data,setData] = useState({
-        name:" ",
-        email: " ",
-        password:" ",
-        mobilenumber: " ",
-        city: " "
+        name:"",
+        email: "",
+        password:"",
+        mobileNumber: "",
+        city: ""
     }) 
 
     let Data = (event) => {
@@ -22,7 +22,7 @@ export let Register = () => {
             name: data.name,
             email: data.email,
             password: data.password,
-            mobilenumber: data.mobilenumber,
+            mobileNumber: data.mobileNumber,
             city: data.city
             
 
@@ -40,18 +40,18 @@ export let Register = () => {
         }
     
   return (
-    <div  className='bg-info text-center'>
+    <div className='bg-info text-center'>
         <div className='box'>
-        <form>
+    
             <input type='text' placeholder="Name" name="name" value={data.name} onChange={Data}/><br></br>
             <input type='text' placeholder="Email" name='email' value={data.email} onChange={Data} /><br></br>
             <input type='password' placeholder="Password" minLength="8" maxLength="15" name='password' value={data.password} onChange={Data}/><br></br><br></br>
-            <input type='tel' placeholder="Mobile Number" pattern="[0-9]{5}-[0-9]{5}" name='mobilenumber' value={data.mobilenumber} onChange={Data}/><br></br>
+            <input type='tel' placeholder="Mobile Number" name='mobileNumber' value={data.mobileNumber} onChange={Data}/><br></br>
             <input type='text' placeholder='City' name='city' value={data.city} onChange={Data}/><br></br>
             
             <button className="btn btn-info" onClick={handleSubmit}>Create my account</button><br></br>
-            <Link to="/l">Already have an account</Link>
-        </form>
+            <Link to="/login">Already have an account</Link>
+        
     </div>
     </div>
   )
