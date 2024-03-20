@@ -31,3 +31,28 @@
   .spacing {
     padding: 50px;
   }
+
+  .animated-image {
+    animation: slideRight 7s linear infinite; /* Example animation: slide from left to right for 2 seconds infinitely */
+  }
+  
+  @keyframes slideRight {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  .ani-image {
+    animation: slideLeft 7s linear infinite; /* Example animation: slide from right to left for 2 seconds infinitely */
+  }
+  
+  @keyframes slideLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }

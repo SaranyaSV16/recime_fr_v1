@@ -8,6 +8,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { AllRecipe } from './AllRecipe';
 import { AddRecipe } from './AddRecipe';
+import { Cuisines } from './Cuisines';
+import { EditForm } from './EditForm';
+
 
 function App() {
   return (
@@ -16,9 +19,11 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
-        <Route path='/hp' element={<HomePage/>}/>
+        <Route path='/homepage' element={<HomePage/>}/>
         <Route path='/allrecipes' element={<AllRecipe/>}/>
         <Route path='/addrecipes' element={<AddRecipe/>}/>
+        <Route path='/cuisines/:category' element={<Cuisines/>}/>
+        <Route path='/editform' element={<EditForm/>}/>
       </Routes>
       </BrowserRouter>
     </div>

@@ -24,31 +24,6 @@ const handleSubmit1 = (event) => {
     event.preventDefault();
     console.log(data1);
 
-    // axios.get(`http://localhost:8080/register/check?email=${data1.email}&password=${data1.password}` ) 
-    // .then((response)=>{
-    //    if(!response.ok){
-    //      throw new Error("Failed to fetch data");
-    //    }
-    //    return response.json();
-    // })
-    // .then((data) =>{
-
-    //  if(data == !data1.email && data == !data1.password){
-    //    return  alert("Email or Password Incorrect");
-    //  }else {
-    //      console.log("Data",data)
-    //      navigate("/hp");
-    //      setData1(data)
-     
-         
-    //  }
-    // })
-    // .catch((error) =>{
-    //   console.error("Error during fetch", error);
-    // });
-
-
-
     axios.get(`http://localhost:8080/register/check?email=${data1.email}&password=${data1.password}`)
     .then((response)=>{
       if(response.data === !data1.email && response.data === !data1.password){
@@ -58,7 +33,7 @@ const handleSubmit1 = (event) => {
           navigate("/addrecipes");
         }
         else {
-          navigate("/allrecipes")
+          navigate("/homepage")
         }
           // console.log("Data",response.data)
           // navigate("/hp");
